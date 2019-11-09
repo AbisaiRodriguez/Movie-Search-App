@@ -1,4 +1,12 @@
 <h1>Results Page</h1>
-<% parseData.Search.forEach((movie) =>{ %>
-    <li><%= movie.Title%></li>
-<% }) %>
+<ul>
+    <% parseData.Search.forEach((movie) =>{ %>
+        <li>
+            <strong>
+                <%= movie.Title%>
+            </strong> - 
+            <i><%= movie.Year%></i></li>
+    <% }) %>
+</ul>
+
+<a href="/">Search again!</a>
