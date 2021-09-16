@@ -1,12 +1,20 @@
-<h1>Results Page</h1>
+<%- include("partials/header") %>
+
+<h1>Movie Search Results</h1>
+
 <ul>
-    <% parseData.Search.forEach((movie) =>{ %>
-        <li>
-            <strong>
-                <%= movie.Title%>
-            </strong> - 
-            <i><%= movie.Year%></i></li>
-    <% }) %>
+        <% parseData.Search.forEach((movie) =>{ %>
+            <li>
+                <strong>
+                    <%= movie.Title%>
+                </strong> <span class="dash">-</span>
+                <i><%= movie.Year%></i></li>
+        <% }); %>
+
+    
+    
 </ul>
 
-<a href="/">Search again!</a>
+<a href="/" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Search Again!</a>
+
+<%- include("partials/footer") %>
